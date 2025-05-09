@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://b522yy47tpd6"]
+
+[ext_resource type="ArrayMesh" uid="uid://b8c24yu1o84pj" path="res://addons/kaykit_halloween_bits/Assets/obj/path_A.obj" id="1_i8qq3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7ytf"]
+albedo_color = Color(0.566967, 0.566967, 0.566967, 1)
+
+[node name="Road" type="Node3D"]
+
+[node name="PathA" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0645187, 0, -0.0201125)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")
+
+[node name="1" type="MeshInstance3D" parent="PathA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0275037, -0.0120313, -1.71455)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")
+
+[node name="1" type="MeshInstance3D" parent="PathA/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0328562, -0.00717235, -1.65466)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")
+
+[node name="1" type="MeshInstance3D" parent="PathA/1/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0328562, -0.00717235, -1.65466)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")
+
+[node name="1" type="MeshInstance3D" parent="PathA/1/1/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0328562, -0.00717235, -1.65466)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")
+
+[node name="1" type="MeshInstance3D" parent="PathA/1/1/1/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0328562, -0.00717235, -1.65466)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")
+
+[node name="1" type="MeshInstance3D" parent="PathA/1/1/1/1/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0328562, -0.00717235, -1.65466)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")
+
+[node name="1" type="MeshInstance3D" parent="PathA/1/1/1/1/1/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0328562, -0.00717235, -1.65466)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")
+
+[node name="1" type="MeshInstance3D" parent="PathA/1/1/1/1/1/1/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0328562, -0.00717235, -1.65466)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")
+
+[node name="1" type="MeshInstance3D" parent="PathA/1/1/1/1/1/1/1/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0328562, -0.00717235, -1.65466)
+mesh = ExtResource("1_i8qq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_h7ytf")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://b5ohtj58eu04a"]
+
+[ext_resource type="ArrayMesh" uid="uid://cdw262e3xiysr" path="res://addons/kaykit_halloween_bits/Assets/obj/crypt.obj" id="1_i4l7o"]
+[ext_resource type="ArrayMesh" uid="uid://da5h4qglxv2yr" path="res://addons/kaykit_halloween_bits/Assets/obj/arch.obj" id="2_4pg1f"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3y1oh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_an2ww"]
+albedo_color = Color(0.313726, 0.317647, 0.270588, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_skkdk"]
+points = PackedVector3Array(0.399961, 7.89977, 4, 0.499804, 7.89977, 3.89663, 0.399961, 8, 3.89977, -0.400548, 7.89977, 4, 2.87725, 5.09945, 4, 3, 5.09945, 3.89663, 0.499804, 7.89977, 3, -0.400548, 8, 3.89977, 0.399961, 8, 3.09945, -0.500391, 7.89977, 3.89663, -3, 5.09945, 3.89663, -2.87784, 5.09945, 4, 3, 0.299922, 4, 3, 5.09945, -3.89742, 0.499804, 7.64996, -3.89742, 0.399961, 7.74941, -3.90055, -0.400548, 8, 3.09945, -0.500391, 7.89977, 3, -3, 5.09945, -3.89742, -3, 0.299922, 4, 3, 0, 4, 2.87725, 5.09945, -4, 0.399961, 7.64996, -4, 3, 0.299922, -4, -0.400548, 7.74941, -3.90055, -0.500391, 7.64996, -3.89742, -0.400548, 7.64996, -4, -2.87784, 5.09945, -4, -3, 0.299922, -4, -3, 0, 4, 3, 0, -4, -3, 0, -4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jffc4"]
+albedo_color = Color(0.497474, 0.497474, 0.497474, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pi6ly"]
+albedo_color = Color(0.214709, 0.56382, 0.473662, 1)
+
+[node name="crypt" type="StaticBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_3y1oh")
+
+[node name="Crypt" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0272549, 1.19209e-07, 0.0148897)
+material_override = SubResource("StandardMaterial3D_an2ww")
+mesh = ExtResource("1_i4l7o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0272549, 1.19209e-07, 0.0148897)
+shape = SubResource("ConvexPolygonShape3D_skkdk")
+
+[node name="Arch" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.102165, 0.305087, 3.66173)
+material_override = SubResource("StandardMaterial3D_jffc4")
+material_overlay = SubResource("StandardMaterial3D_pi6ly")
+mesh = ExtResource("2_4pg1f")
