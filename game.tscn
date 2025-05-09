@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://c4shnpui6wn5n"]
+[gd_scene load_steps=60 format=4 uid="uid://c4shnpui6wn5n"]
 
 [ext_resource type="PackedScene" uid="uid://b522yy47tpd6" path="res://road.tscn" id="1_bxj1g"]
 [ext_resource type="AudioStream" uid="uid://jttorptrp4jx" path="res://addons/dark-forest(chosic.com).mp3" id="1_ewiju"]
@@ -64,6 +64,20 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.03
 volumetric_fog_albedo = Color(0.332765, 0.28657, 0.192581, 1)
 volumetric_fog_emission = Color(0.565003, 0.436575, 0.34084, 1)
+
+[sub_resource type="GDScript" id="GDScript_xhwep"]
+script/source = "extends AudioStreamPlayer
+
+@onready var music = $\".\"
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	music.play()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lo7kw"]
 albedo_texture = ExtResource("1_fkuap")
@@ -210,6 +224,7 @@ environment = SubResource("Environment_6c8nn")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Map"]
 stream = ExtResource("1_ewiju")
 autoplay = true
+script = SubResource("GDScript_xhwep")
 
 [node name="crypt" parent="Map" instance=ExtResource("3_ktj0l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85521, 0.023869, 0.144924)
