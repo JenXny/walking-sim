@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/dark-forest(chosic.com).mp3-3c61adf7bb23f25a8
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
